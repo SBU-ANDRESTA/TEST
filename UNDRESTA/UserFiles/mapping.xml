@@ -1,0 +1,21 @@
+<!-- mapping .xml for creating system -->
+<mappings>
+  <!-- process #0 -->
+  <process_mapping name="proc_0" target="node_0" cpuName="nios"/>
+
+  <!-- process #1 -->
+  <process_mapping name="proc_1" target="node_0" cpuName="nios"/>
+
+  <!-- process #2 -->
+  <process_mapping name="proc_2" target="node_1" cpuName="nios"/>
+
+  <!-- process #3 -->
+  <process_mapping name="proc_3" target="node_3" cpuName="nios"/>
+
+  <!-- process #4 -->
+  <process_mapping name="proc_4" target="node_2" cpuName="nios"/>
+
+  <!-- process #5 -->
+  <process_mapping name="proc_5" target="node_2" cpuName="nios"/>
+
+</mappings>

@@ -1,0 +1,71 @@
+<!-- This is .xml file which we will get from our model (maybe ForSyDe System-c) -->
+  <!-- below is our System -->
+  <process_network>
+    <!-- internal signal infos -->
+    <signal name="sig01" type="int" source="proc_0" source_port="p01_0" target="proc_1" target_port="p01_1"/>
+    <signal name="sig10" type="int" source="proc_1" source_port="p10_1" target="proc_0" target_port="p10_0"/>
+
+    <signal name="sig02" type="int" source="proc_0" source_port="p02_0" target="" target_port="p02_2"/>
+    <signal name="sig20" type="int" source="proc_2" source_port="p20_2" target="proc_0" target_port="p20_0"/>
+
+    <signal name="sig31" type="int" source="proc_3" source_port="p31_3" target="proc_1" target_port="p31_1"/>
+    <signal name="sig13" type="int" source="proc_1" source_port="p13_1" target="proc_3" target_port="p13_3"/>
+
+    <signal name="sig32" type="int" source="proc_3" source_port="p32_3" target="proc_2" target_port="p32_2"/>
+    <signal name="sig23" type="int" source="proc_2" source_port="p23_2" target="proc_3" target_port="p23_3"/>
+
+    <!-- process infos -->
+
+    <!-- process 0 -->
+    <process name="proc_0" numOfInp="1" numOfOut="1">
+      <!-- input & output ports -->
+      <port ID="0" name="p5_p0" type="int" direction="INP" numOfToken="3" init_val="5,6,7"/>
+      <port ID="0" name="p0_p1" type="int" direction="OUT" numOfToken="2"/>
+      <source_file name="node_0"/>
+    </process>
+
+    <!-- process 1 -->
+    <process name="proc_1" numOfInp="2" numOfOut="2">
+      <!-- input & output ports -->
+      <port ID="0" name="p0_p1" type="int" direction="INP" numOfToken="2" init_val="6,8"/>
+      <port ID="1" name="p4_p1" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="0" name="p1_p2" type="int" direction="OUT" numOfToken="1"/>
+      <port ID="1" name="p1_p3" type="int" direction="OUT" numOfToken="1"/>
+      <source_file name="node_0"/>
+    </process>
+
+    <!-- process 2 -->
+    <process name="proc_2" numOfInp="1" numOfOut="1">
+      <!-- input & output ports -->
+      <port ID="0" name="p1_p2" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="0" name="p2_p3" type="int" direction="OUT" numOfToken="1"/>
+      <source_file name="node_1"/>
+    </process>
+
+    <!-- process 3 -->
+    <process name="proc_3" numOfInp="2" numOfOut="1">
+      <!-- input & output ports -->
+      <port ID="0" name="p2_p3" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="1" name="p1_p3" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="0" name="p3_p4" type="int" direction="OUT" numOfToken="1"/>
+      <source_file name="node_3"/>
+    </process>
+
+    <!-- process 4 -->
+    <process name="proc_4" numOfInp="1" numOfOut="2">
+      <!-- input & output ports -->
+      <port ID="0" name="p3_p4" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="0" name="p4_p1" type="int" direction="OUT" numOfToken="1"/>
+      <port ID="1" name="p4_p5" type="int" direction="OUT" numOfToken="1"/>
+      <source_file name="node_2"/>
+    </process>
+
+    <!-- process 5 -->
+    <process name="proc_5" numOfInp="1" numOfOut="1">
+      <!-- input & output ports -->
+      <port ID="0" name="p4_p5" type="int" direction="INP" numOfToken="1" init_val=""/>
+      <port ID="0" name="p5_p0" type="int" direction="OUT" numOfToken="3"/>
+      <source_file name="node_2"/>
+    </process>
+
+  </process_network>

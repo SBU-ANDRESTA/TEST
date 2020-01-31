@@ -1,0 +1,49 @@
+<?xml version = "1.0"?>
+
+<Hardware-Configuration>
+
+	<Project-Properties>
+			<DEVICE_FAMILY>Cyclone V</DEVICE_FAMILY>
+			<DEVICE>5CSEMA4U23C6</DEVICE>
+	</Project-Properties>
+
+	<NoC>
+		<RowNo>2</RowNo>
+		<ColNo>2</ColNo>
+		<AddrWidth>2</AddrWidth>
+		<DataWidth>8</DataWidth>
+		<PackWidth>8</PackWidth>
+		<PhyCh>4</PhyCh>
+		<PhyChAddr>2</PhyChAddr>
+		<PhyRoCh>5</PhyRoCh>
+		<PhyRoChAddr>3</PhyRoChAddr>
+		<RoCh>1</RoCh>
+		<RoChAddr>1</RoChAddr>
+		<ViCh>1</ViCh>
+		<ViChAddr>1</ViChAddr>
+	</NoC>
+
+	<!-- if you do not declare a tile, it would get the default values -->
+	<!-- if you do not declare one of the tile's element, it would get the default value -->
+	<tiles>
+
+		<tile number = "0">
+			<node_type number = "0">processor</node_type>
+			<node_name>NIOS II/e</node_name>
+			<memory_size>16384.0</memory_size>
+			<fifo_in_depth>16</fifo_in_depth>
+			<fifo_out_depth>16</fifo_out_depth>
+		</tile>
+
+		<tile number = "2">
+			<node_type number = "3">processor</node_type>
+			<node_name>NIOS II/f</node_name>
+			<memory_size>32000.0</memory_size>
+			<fifo_in_depth>16</fifo_in_depth>
+			<fifo_out_depth>16</fifo_out_depth>
+		</tile>
+
+	</tiles>
+
+
+</Hardware-Configuration>
